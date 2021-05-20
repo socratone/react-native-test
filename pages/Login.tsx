@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import {
   StyleSheet,
   View,
+  SafeAreaView,
   Text,
   TextInput,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 
 const Login = ({ navigation }: { navigation: any }) => {
@@ -12,7 +14,13 @@ const Login = ({ navigation }: { navigation: any }) => {
   const [password, setPassword] = useState('');
 
   const handleSubmit = () => {
-    navigation.navigate('Home');
+    if (password) {
+      navigation.navigate('Home');
+    } else {
+      Alert.alert('오류', '비밀번호가 틀렸어요.', [
+        { text: 'OK', onPress: () => console.log('OK Pressed') },
+      ]);
+    }
   };
 
   const handleForgot = () => {
@@ -20,7 +28,7 @@ const Login = ({ navigation }: { navigation: any }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.loginBox}>
         <View style={styles.loginBoxMain}>
           <Text style={styles.title}>회원이세요? 로그인하세요!</Text>
@@ -47,7 +55,7 @@ const Login = ({ navigation }: { navigation: any }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

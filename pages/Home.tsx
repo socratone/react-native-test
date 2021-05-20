@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, SafeAreaView, Text } from 'react-native';
 
 const Home = ({ navigation }: { navigation: any }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Welcome!</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

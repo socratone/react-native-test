@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, SafeAreaView, Text, Button } from 'react-native';
 
 const Forgot = ({ navigation }: { navigation: any }) => {
   const handlePress = () => {
@@ -7,7 +7,7 @@ const Forgot = ({ navigation }: { navigation: any }) => {
   }
 
   return (
-    <View
+    <SafeAreaView
       style={{
         backgroundColor: 'white',
         height: '100%',
@@ -18,7 +18,7 @@ const Forgot = ({ navigation }: { navigation: any }) => {
     >
       <Text style={{ fontSize: 18, marginBottom: 5 }}>아직 비밀번호 찾기 기능은 사용할 수 없어요.</Text>
       <Button title="돌아가기" onPress={handlePress} />
-    </View>
+    </SafeAreaView>
   );
 };
 
