@@ -4,6 +4,10 @@ import RoundButton from '../components/RoundButton';
 import ListItem from '../components/ListItem';
 
 const Home = ({ navigation }: { navigation: any }) => {
+  const handlePress = () => {
+    navigation.navigate('Notification');
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <Image
@@ -19,7 +23,7 @@ const Home = ({ navigation }: { navigation: any }) => {
         }}
       />
       <Text style={{ fontSize: 18, marginBottom: 20 }}>Welcome to my app!</Text>
-      <RoundButton onPress={() => console.log('clicked')}>
+      <RoundButton onPress={handlePress}>
         Getting Started
       </RoundButton>
       <ScrollView style={{ width: '100%', backgroundColor: 'whitesmoke', marginTop: 20 }}>
