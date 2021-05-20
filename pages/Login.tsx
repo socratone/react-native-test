@@ -61,7 +61,7 @@ const Login = ({ navigation }: { navigation: any }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'lightblue',
+    backgroundColor: 'rgb(206, 236, 254)',
     height: '100%',
   },
   loginBox: {
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderColor: 'gainsboro',
-    borderWidth: 2,
+    borderWidth: 1,
     padding: 10,
     fontSize: 18,
     width: '100%',

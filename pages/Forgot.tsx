@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeAreaView, Text, Button } from 'react-native';
+import { SafeAreaView, Text, Button } from 'react-native';
 
 const Forgot = ({ navigation }: { navigation: any }) => {
   const handlePress = () => {
